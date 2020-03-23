@@ -18,34 +18,54 @@ public class Main {
         System.out.println("У директора доступны команды - \"Начать урок\" \"; \"Закончить урок\"");
         System.out.println("\"Вся информация о школе\"");
         while (true) {
-            if (scanner.nextLine().equals("Добавить ученика")) {
-                System.out.println("Введите по очереди: изучаемый предмет, имя, IQ, возраст");
-                String subject = scanner.nextLine();
-                String name = scanner.nextLine();
-                int iQ = scanner.nextInt();
-                int age = scanner.nextInt();
-                school.addStudies(iQ, subject, age, name);
-            } else if (scanner.nextLine().equals("Учиться")) {
-                System.out.println("Введите имя ученика, которого нужно учиться");
-                school.beTeach(scanner.nextLine());
-            } else if (scanner.nextLine().equals("Добавить учителя")) {
-                System.out.println("Введите по очереди: преподаваемый предмет, имя, возраст");
-                String subject = scanner.nextLine();
-                String name = scanner.nextLine();
-                int age = scanner.nextInt();
-                school.addTeachers(subject, age, name);
-            } else if (scanner.nextLine().equals("Начать урок")) {
-                school.start();
-            } else if (scanner.nextLine().equals("Закончить урок")) {
-                school.finish();
-            } else if (scanner.nextLine().equals("Посмотреть список учеников")) {
-                school.watchsstudies();
-            }
-            else if (scanner.nextLine().equals("Сменить директора")) {
-                System.out.println("Назначьте нового директора!");
-                school.otheDirector(scanner.nextLine());
-            }else if (scanner.nextLine().equals("Вся информация о школе")) {
-                school.allInformathion();
+            switch (scanner.nextLine()) {
+                case ("Добавить ученика"): {
+                    System.out.println("Введите по очереди: изучаемый предмет, имя, IQ, возраст");
+                    String subject = scanner.nextLine();
+                    String name = scanner.nextLine();
+                    int iQ = scanner.nextInt();
+                    int age = scanner.nextInt();
+                    school.addStudies(iQ, subject, age, name);
+                    break;
+                }
+                case ("Учиться"): {
+                    System.out.println("Введите имя ученика, которого нужно учиться");
+                    school.beTeach(scanner.nextLine());
+                    break;
+                }
+                case ("Добавить учителя"): {
+                    System.out.println("Введите по очереди: преподаваемый предмет, имя, возраст");
+                    String subject = scanner.nextLine();
+                    String name = scanner.nextLine();
+                    int age = scanner.nextInt();
+                    school.addTeachers(subject, age, name);
+                    break;
+                }
+                case ("Начать урок"): {
+                    school.start();
+                    break;
+                }
+                case ("Закончить урок"): {
+                    school.finish();
+                    break;
+                }
+                case ("Посмотреть список учеников"): {
+                    school.watchsstudies();
+                    break;
+                }
+                case ("Сменить директора"): {
+                    System.out.println("Назначьте нового директора!");
+                    school.otheDirector(scanner.nextLine());
+                    break;
+                }
+                case ("Вся информация о школе"): {
+                    school.allInformathion();
+                    break;
+                }
+                default: {
+                    System.out.println("Такой команды нет");
+                    break;
+                }
             }
         }
     }

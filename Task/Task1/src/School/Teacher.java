@@ -20,8 +20,10 @@ public class Teacher extends People implements TeachTo {
     @Override
     public void teach(Study study) {//Учитель проводит урок
         if (Manager.getIsStartFinish()) {//Если директор объявил о начале занятий, то урок будет идти
-                study.setIq(study.getIq() + 10);//Увеличиваем образованность студентов
-                System.out.println("IQ ученика выросто, теперь оно равно = " + study.getIq());
-        }else System.out.println("Занятия не идут, пусть директор объявит о начале занятий!");
+            study.setIq(study.getIq() + 10);//Увеличиваем образованность студентов
+            System.out.println("IQ ученика выросто, теперь оно равно = " + study.getIq());
+        } else {
+            System.out.println("Занятия не идут, пусть директор объявит о начале занятий!");
+        }
     }
 }

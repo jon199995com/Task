@@ -39,15 +39,23 @@ public class School {
     }
 
     public void beTeach(String name) {//Если ученик хочет учиться, учим его!
+        boolean haveStude = false;
         for (int i = 0; i < studies.length; i++) {
-            if (studies[i] != null && name.equals(studies[i].getName())) {//Ищем ученика с заданным именем
+            if (studies[i] != null && studies[i].getName().equals(name)) {//Ищем ученика с заданным именем
                 for (int j = 0; j < teachers.length; j++) {
                     if (teachers[j] != null && teachers[j].getSubjectToTeach().equals(studies[i].getSubject())) {//Ищем учителя с таким же предметом как и ученик
                         studies[i].beTeach();//Учим!
                         return;//Выходим из цикла
-                    } else System.out.println("Нет преподавателя данного предмета");
+                    } else {
+                        System.out.println("Нет преподавателя данного предмета");
+                        haveStude = true;
+                        break;
+                    }
                 }
-            } else System.out.println("Такого ученика нет");
+            } else if (!haveStude){
+                System.out.println("Такого ученика нет");
+                break;
+            }
         }
     }
 
