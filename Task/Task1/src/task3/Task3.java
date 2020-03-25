@@ -20,7 +20,7 @@ public class Task3 {
             if (i == mass.length - 1) {
                 resultMas[2] /= mass.length;
                 System.out.println("Рандомный массив: " + Arrays.toString(mass));
-                System.out.println("Минимальное значение: " + resultMas[0]+"\nМаксимальное значение: " + resultMas[1]+"\nСреднее значение: " + resultMas[2]);
+                System.out.println("Минимальное значение: " + resultMas[0] + "\nМаксимальное значение: " + resultMas[1] + "\nСреднее значение: " + resultMas[2]);
             }
         }
     }

@@ -4,7 +4,6 @@
 // Создать массив из n случайных целых чисел из отрезка [0;n]
 // и вывести его на экран. Создать второй массив только из чётных элементов
 // первого массива, если они там есть, и вывести его в консоль
-
 package task4;
 
 import org.w3c.dom.ls.LSOutput;
@@ -22,12 +21,12 @@ public class Task4 {
                 int[] mass = new int[num];
                 for (int i = 0; i < mass.length; i++) {
                     mass[i] = (int) (Math.random() * num);
-                    if (mass[i]%2 == 0) time++;
+                    if (mass[i] % 2 == 0) time++;
                 }
                 int[] copyMass = new int[time];
-                for (int i = 0; i <mass.length ; i++) {
-                    if (mass[i]%2 == 0) {
-                        copyMass[j] =mass[i];
+                for (int i = 0; i < mass.length; i++) {
+                    if (mass[i] % 2 == 0) {
+                        copyMass[j] = mass[i];
                         j++;
                     }
                 }

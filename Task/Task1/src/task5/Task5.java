@@ -18,13 +18,13 @@ public class Task5 {
                     max = mass[0][0];
                     bool = false;
                 }
-                if ( max < mass[i][j]) max = mass[i][j];
+                if (max < mass[i][j]) max = mass[i][j];
             }
         }
         System.out.println("Рандомный массив: ");
-        for (int i = 0; i <mass.length ; i++) {
-            for (int j = 0; j <mass[i].length ; j++) {
-                 System.out.print(mass[i][j]+" ");
+        for (int i = 0; i < mass.length; i++) {
+            for (int j = 0; j < mass[i].length; j++) {
+                System.out.print(mass[i][j] + " ");
             }
             System.out.println();
         }

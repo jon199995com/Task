@@ -1,4 +1,3 @@
-
 //todo: Найти наибольший общий делитель (НОД) двух чиселpackage task1;
 
 import java.util.Scanner;

@@ -7,17 +7,18 @@ public class School {
     Scanner scanner = new Scanner(System.in);
     private int count = 0;//Счетчик учеников
     private int teacherCount;//Счетчик учителей
-    private String schoolName = "Школа";
+    private final String schoolName;//Нельзя менять название школы
     private Study[] studies = new Study[10];//Кол-во учеников
     private Teacher[] teachers = new Teacher[10];//кол-во Учителей
     private Manager director;//Директор, один единственный и всеми любимый
 
-    public void newdirector(String name) {//Назначаем директора
-        director = new Manager(50, name);
+    public void newdirector(int age, String nameDirector) {//Назначаем директора
+        director = new Manager(50, nameDirector);
         System.out.println("Вы назначили директора: " + director.getName());
     }
 
     public School(String schoolName) {//Конструктор, сразу создаем имя школе
+    this.schoolName = schoolName;
     }
 
     public void addStudies(int iq, String subject, int age, String name) {//Добавляем студентов

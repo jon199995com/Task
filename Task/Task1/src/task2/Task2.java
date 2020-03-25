@@ -15,7 +15,7 @@ public class Task2 {
         for (int i = 0; i < mass.length; i++) {
             result = 7 - mass[i];
             if (Arrays.binarySearch(mass, result) >= 0)
-                    System.out.println(mass[i] + " " + mass[Arrays.binarySearch(mass, result)]);
+                System.out.println(mass[i] + " " + mass[Arrays.binarySearch(mass, result)]);
         }
     }
 }

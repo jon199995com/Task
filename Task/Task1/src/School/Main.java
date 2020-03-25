@@ -7,8 +7,8 @@ public class Main {
         System.out.println("Введите название школы");
         Scanner scanner = new Scanner(System.in);
         School school = new School(scanner.nextLine());
-        System.out.println("Как будут звать директора?");
-        school.newdirector(scanner.nextLine());
+        System.out.println("Назначьте директора( Возраст и имя )");
+        school.newdirector(scanner.nextInt(), scanner.nextLine());
         System.out.println("Вам доступны команды:");
         System.out.println("\"Добавить учителя\"");
         System.out.println("У учителя доступна команда - \"Учить ученика\"");
