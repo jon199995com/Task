@@ -1,5 +1,6 @@
 package ferm.pet;
 
+import ferm.man.FeedPet;
 import ferm.wild.animal.Hit;
 
 public class Cat extends Pet {
@@ -22,7 +23,8 @@ public class Cat extends Pet {
     }
 
     @Override
-    public void getAddHealth() {
-
+    public void getAddHealth(FeedPet enemy) {
+        this.setHealth(getHealth()+1);
     }
+
 }

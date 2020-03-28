@@ -1,12 +1,24 @@
 package ferm.pet;
 
-abstract public class Pet implements CanBeHits, CanBeEaten, AddHealth{
+import ferm.man.FeedPet;
+import ferm.wild.animal.Hit;
+
+public class Pet implements CanBeHits, CanBeEaten, AddHealth, Cloneable {
     //    имя, вес, скорость, здоровье, количество ресурсов
     private String name;
     private int weight;
     private int speed;
     private int health;
     private int resources;
+    private boolean isLive = true;
+
+    public boolean isLive() {
+        return isLive;
+    }
+
+    public void setLive(boolean live) {
+        isLive = live;
+    }
 
     public String getName() {
         return name;
@@ -21,7 +33,7 @@ abstract public class Pet implements CanBeHits, CanBeEaten, AddHealth{
     }
 
     public void setWeight(int weight) {
-        if (weight > 0 ) this.weight = weight;
+        if (weight > 0) this.weight = weight;
     }
 
     public int getSpeed() {
@@ -46,5 +58,21 @@ abstract public class Pet implements CanBeHits, CanBeEaten, AddHealth{
 
     public void setResources(int resources) {
         this.resources = resources;
+    }
+
+    @Override
+    public void getAddHealth(FeedPet enemy) {
+        setHealth(getHealth()+1);
+
+    }
+
+    @Override
+    public void itIsGameOverForPet() {
+
+    }
+
+    @Override
+    public void itIsNotAllYetForPet(Hit enemy) {
+
     }
 }

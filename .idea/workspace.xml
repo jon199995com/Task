@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bf1de55-4745-4964-aa25-0a3bd2eb26e6" name="Default Changelist" comment="5-ый урок, работа со строками :)">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/RandomExemple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeLessonButtleUnit/ButtleUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeLessonButtleUnit/Knight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeLessonButtleUnit/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeShape/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeShape/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeShape/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task/Task1/src/homeShape/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9bf1de55-4745-4964-aa25-0a3bd2eb26e6" name="Default Changelist" comment="Ферма, проскакивает сканер :(">
+      <change afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/OtherAnimal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/out/production/Task/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/out/production/Task/Task1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/out/production/Task/task4/Task4.class" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/out/production/Task/task4/Task4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/School/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/School/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/School/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/School/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/Ferma.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/Ferma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/task1/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/task1/Task1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/task2/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/task2/Task2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/task3/Task3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/task3/Task3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/task4/Task4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/task4/Task4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/Task1/src/task5/Task5.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/task5/Task5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/man/FermerMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/man/FermerMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/AddHealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/AddHealth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Chiken.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Chiken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Cow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Cow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Rabit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/pet/Rabit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/Bear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/Fox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/WildAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/WildAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/Task1/src/ferm/wild/animal/Wolf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +46,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Task/Task1/src/RandomExemple.java" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lessons/src/lesson9/Author.java" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -170,79 +162,103 @@
       <option name="project" value="LOCAL" />
       <updated>1585161812372</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ферма, проскакивает сканер :(">
+      <created>1585166156485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585166156485</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <MESSAGE value="ДЗ о школе, я не делал массовое объявление о занятиях, т.к., когда учитель объявляет занятие, то учатся все студенты кто изучает его предмет, и я немного не успел:(" />
-    <MESSAGE value="Ферма, проскакивает сканер :(" />
     <MESSAGE value="5-ый урок, работа со строками :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="5-ый урок, работа со строками :)" />
+    <MESSAGE value="Ферма, проскакивает сканер :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ферма, проскакивает сканер :(" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583620416068">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1583620416067" />
-    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1585158798956">
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1585409227310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585158798956" />
-    <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584205927745">
+    <state x="488" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585409227310" />
+    <state x="479" y="249" width="407" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585309486938">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584205927745" />
-    <state x="315" y="0" width="692" height="727" key="CommitChangelistDialog2" timestamp="1585165946107">
+    <state x="479" y="249" width="407" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1585309486938" />
+    <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1585308807718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="315" y="0" width="692" height="727" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585165946107" />
-    <state x="357" y="73" key="FileChooserDialogImpl" timestamp="1585157294414">
+    <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585308807718" />
+    <state x="315" y="0" width="692" height="727" key="CommitChangelistDialog2" timestamp="1585418070650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="357" y="73" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585157294414" />
+    <state x="315" y="0" width="692" height="727" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585418070650" />
+    <state x="107" y="54" key="DiffContextDialog" timestamp="1585166008646">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="107" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1585166008646" />
+    <state x="357" y="73" key="FileChooserDialogImpl" timestamp="1585333994260">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="357" y="73" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585333994260" />
     <state x="505" y="263" key="Github.CreateGistDialog" timestamp="1584308507164">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="263" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584308507164" />
-    <state width="1323" height="164" key="GridCell.Tab.0.bottom" timestamp="1585162031606">
+    <state width="1323" height="269" key="GridCell.Tab.0.bottom" timestamp="1585416208782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585162031606" />
-    <state width="1323" height="164" key="GridCell.Tab.0.center" timestamp="1585162031606">
+    <state width="1323" height="269" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585416208782" />
+    <state width="1323" height="269" key="GridCell.Tab.0.center" timestamp="1585416208782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585162031606" />
-    <state width="1323" height="164" key="GridCell.Tab.0.left" timestamp="1585162031606">
+    <state width="1323" height="269" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585416208782" />
+    <state width="1323" height="269" key="GridCell.Tab.0.left" timestamp="1585416208781">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585162031605" />
-    <state width="1323" height="164" key="GridCell.Tab.0.right" timestamp="1585162031606">
+    <state width="1323" height="269" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585416208781" />
+    <state width="1323" height="269" key="GridCell.Tab.0.right" timestamp="1585416208782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585162031606" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1585160758984">
+    <state width="1323" height="269" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585416208782" />
+    <state x="445" y="74" key="RollbackChangesDialog" timestamp="1585166021460">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585160758984" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1585161821371">
+    <state x="445" y="74" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1585166021460" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1585418035837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585161821371" />
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584312864747">
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585418035837" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1585166179264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1584312864747" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585166179264" />
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585416545361">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1585416545361" />
     <state x="65" y="0" key="new project wizard" timestamp="1585151882245">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1585151882245" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1584309204411">
+    <state x="389" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1585308823929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584309204411" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584209434515">
+    <state x="389" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1585308823929" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1585414088457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584209434515" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585414088457" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585395435921">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585395435921" />
   </component>
 </project>

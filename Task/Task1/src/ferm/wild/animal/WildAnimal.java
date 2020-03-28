@@ -1,11 +1,23 @@
 package ferm.wild.animal;
 
-abstract public class WildAnimal implements Hit, Eating {
+import ferm.pet.CanBeEaten;
+import ferm.pet.CanBeHits;
+
+public class WildAnimal implements Hit, Eating {
     //    имя, вес, скорость, сила
     private String name;
     private int weight;
     private int speed;
     private int strong;
+    private int goAway;
+
+    public int getGoAway() {
+        return goAway;
+    }
+
+    public void setGoAway(int goAway) {
+        this.goAway = goAway;
+    }
 
     public String getName() {
         return name;
@@ -37,5 +49,15 @@ abstract public class WildAnimal implements Hit, Eating {
 
     public void setStrong(int strong) {
         if (strong > 0) this.strong = strong;
+    }
+
+    @Override
+    public void EatPet(CanBeEaten enemy) {
+
+    }
+
+    @Override
+    public void HitPet(CanBeHits enemy) {
+
     }
 }

@@ -1,6 +1,6 @@
 package ferm.pet;
 
-import ferm.man.EatPet;
+import ferm.man.FeedPet;
 import ferm.wild.animal.Hit;
 
 public class Cow extends Pet implements Givresurces, CanBeEatenFermerMan {
@@ -23,8 +23,8 @@ public class Cow extends Pet implements Givresurces, CanBeEatenFermerMan {
     }
 
     @Override
-    public void getAddHealth() {
-
+    public void getAddHealth(FeedPet enemy) {
+        this.setHealth(getHealth()+1);
     }
 
     @Override

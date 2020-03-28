@@ -1,7 +1,7 @@
 package ferm.pet;
 
-import ferm.man.EatPet;
-import ferm.pet.Pet;
+
+import ferm.man.FeedPet;
 import ferm.wild.animal.Hit;
 
 public class Rabit extends Pet implements CanBeEatenFermerMan {
@@ -24,13 +24,13 @@ public class Rabit extends Pet implements CanBeEatenFermerMan {
     }
 
     @Override
-    public void getAddHealth() {
-//        this.setHealth(getHealth()+1); // Todo Восстанавливает здоровье но не больше начального?! Подумать
+    public void canEatenMan() {
+
     }
 
-
     @Override
-    public void canEatenMan() {
+    public void getAddHealth(FeedPet enemy) {
+        this.setHealth(getHealth()+1); // Todo Восстанавливает здоровье но не больше начального?! Подумать
 
     }
 }
