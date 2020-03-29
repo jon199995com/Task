@@ -119,59 +119,12 @@ public class Main {
                 }
                 case (3): {
                     // todo 1 Начало дня
-                    System.out.println("У фермера " + ferma.getMan().getRes() + " ресурсов ( - 2)");
+
                     if (ferma.getMan().getRes() < 2) {
                         System.out.println("У фермера не осталось ресурсов");
                         break;
-                    }
-                    ferma.getMan().setRes(ferma.getMan().getRes() - 2);
-                    // todo 2 Приходит дикое животное
-                    int randPet = 0;
-                    int randWildAnimal = 0;
-
-                    while (ferma.whoIsLive()) {//Ищем живое домашенее животное
-                        randPet = random.nextInt(ferma.getMaxAnimal());
-                        if (ferma.getAllPets()[randPet].isLive()) {
-                            break;//если есть живой питомец, то рандомим пока он не найдется
-                        }
-                    }
-                    while (wildAnimal.whoIsHere()) {//Ищем ДЖ, которого еще не прогнали 4раза
-                        randWildAnimal = random.nextInt(wildAnimal.getCount());
-                        if (wildAnimal.getWildAnimals()[randWildAnimal].getGoAway() < 3
-                                && wildAnimal.getWildAnimals()[randWildAnimal] != null) break;//рандомим пока не найдем его
-                    }
-                    if (ferma.whoIsLive() && wildAnimal.whoIsHere()) {//Если есть дикое животное и хотяб один питомец
-                        System.out.println("На питомцев напал(а)" + wildAnimal.getWildAnimals()[randWildAnimal].getName());
-                        if (random.nextBoolean()) {//рандомно прогонит ли фермер дикое животное
-                            wildAnimal.getWildAnimals()[randWildAnimal]
-                                    .setGoAway(wildAnimal.getWildAnimals()[randWildAnimal].getGoAway() + 1);//Прогоняем животное
-                            System.out.println(wildAnimal.getWildAnimals()[randWildAnimal].getName()+" Прогнали "+wildAnimal.getWildAnimals()[randWildAnimal].getGoAway()+" раза ");
-                            System.out.println("Но фермер прогнал его!");
-                        } else if (wildAnimal.getWildAnimals()[randWildAnimal].getSpeed() < ferma.getAllPets()[randPet].getSpeed()) {
-                            //не пронал, но если Питомец быстрее, то он убегает
-                            System.out.println("Фермер не прогнал животное, но питомец убежал");
-                        } else if (random.nextBoolean()) {//Если питомец не убежал, то ДЖ рандомно или ранит или убивает питомца
-                            ferma.getAllPets()[randPet]//ранил
-                                    .setHealth(ferma.getAllPets()[randPet].getHealth() - wildAnimal.getWildAnimals()[randWildAnimal].getStrong());
-                            if (ferma.getAllPets()[randPet].getHealth() < 0) {//Ранил, и убил
-                                ferma.getAllPets()[randPet].setLive(false);
-                                System.out.println("Животное забили");
-                            } else
-                                System.out.println("Животное " + ferma.getAllPets()[randPet].getName() + " было ранено животным:"//Просто ранил, животное выжило
-                                        + wildAnimal.getWildAnimals()[randWildAnimal].getName());
-                        } else {//Животное съели
-                            ferma.getAllPets()[randPet].setLive(false);
-                            System.out.println("Животное съели!");
-                        }
-                    }
-                    //todo 3 - Фермер кормит всех животных (животные восполняют здоровье)
-                    ferma.feedPets();
-                    //todo 4 - Фермер собирает ресурсы с животных, с которых можно их собирать.
-                    // Если таких не осталось, съедает животное, пригодное в пищу (если такие остались).
-                    ferma.eatPet();
-                    ferma.takeRes();
-                    System.out.println("Собрали ресурсы с животных, которые могут давать");
-                    ferma.whoIsLive();
+                    }else System.out.println("У фермера " + ferma.getMan().getRes());
+                    ferma.passDay(wildAnimal);//Реализация дня
                     break;
                 }
                 default:

@@ -2,6 +2,10 @@ package ferm;
 
 import ferm.man.FermerMan;
 import ferm.pet.*;
+import ferm.wild.animal.OtherAnimal;
+
+import java.util.Date;
+import java.util.Random;
 
 public class Ferma implements Cloneable {
     private Pet[] allPets = new Pet[10];//Массив со всеми домашними питомцами
@@ -12,6 +16,59 @@ public class Ferma implements Cloneable {
     private FermerMan man = new FermerMan();
     private int maxAnimal = 0;//счетчик домашних животных
     private boolean isSomeoneIsLive = true;//Есть ли живые питомцы,которые могут давать ресурсы
+    Random random = new Random(new Date().getTime());
+
+    public void passDay(OtherAnimal enemy){
+        // todo 1 Начало дня
+        getMan().setRes(getMan().getRes() - 2);
+        // todo 2 Приходит дикое животное
+        int randPet = 0;
+        int randWildAnimal = 0;
+
+        while (whoIsLive()) {//Ищем живое домашенее животное
+            randPet = random.nextInt(getMaxAnimal());
+            if (getAllPets()[randPet].isLive()) {
+                break;//если есть живой питомец, то рандомим пока он не найдется
+            }
+        }
+        while (enemy.whoIsHere()) {//Ищем ДЖ, которого еще не прогнали 4раза
+            randWildAnimal = random.nextInt(enemy.getCount());
+            if (enemy.getWildAnimals()[randWildAnimal].getGoAway() < 3
+                    && enemy.getWildAnimals()[randWildAnimal] != null) break;//рандомим пока не найдем его
+        }
+        if (whoIsLive() && enemy.whoIsHere()) {//Если есть дикое животное и хотяб один питомец
+            System.out.println("На питомцев напал(а)" + enemy.getWildAnimals()[randWildAnimal].getName());
+            if (random.nextBoolean()) {//рандомно прогонит ли фермер дикое животное
+                enemy.getWildAnimals()[randWildAnimal]
+                        .setGoAway(enemy.getWildAnimals()[randWildAnimal].getGoAway() + 1);//Прогоняем животное
+//                System.out.println(enemy.getWildAnimals()[randWildAnimal].getName()+" Прогнали "+enemy.getWildAnimals()[randWildAnimal].getGoAway()+" раза ");
+                System.out.println("Но фермер прогнал его!");
+            } else if (enemy.getWildAnimals()[randWildAnimal].getSpeed() < getAllPets()[randPet].getSpeed()) {
+                //не пронал, но если Питомец быстрее, то он убегает
+                System.out.println("Фермер не прогнал животное, но питомец убежал");
+            } else if (random.nextBoolean()) {//Если питомец не убежал, то ДЖ рандомно или ранит или убивает питомца
+                getAllPets()[randPet]//ранил
+                        .setHealth(getAllPets()[randPet].getHealth() - enemy.getWildAnimals()[randWildAnimal].getStrong());
+                if (getAllPets()[randPet].getHealth() < 0) {//Ранил, и убил
+                    getAllPets()[randPet].setLive(false);
+                    System.out.println("Животное забили");
+                } else
+                    System.out.println("Животное " + getAllPets()[randPet].getName() + " было ранено животным:"//Просто ранил, животное выжило
+                            + enemy.getWildAnimals()[randWildAnimal].getName());
+            } else {//Животное съели
+                getAllPets()[randPet].setLive(false);
+                System.out.println("Животное съели!");
+            }
+        }
+        //todo 3 - Фермер кормит всех животных (животные восполняют здоровье)
+        feedPets();
+        //todo 4 - Фермер собирает ресурсы с животных, с которых можно их собирать.
+        // Если таких не осталось, съедает животное, пригодное в пищу (если такие остались).
+        eatPet();
+        takeRes();
+        System.out.println("Собрали ресурсы с животных, которые могут давать");
+        whoIsLive();
+    }
 
     public void takeRes() {//Фермер собирает ресурсы
         for (int i = 0; i < getMaxAnimal(); i++) {//Перебираем всех питомцев
