@@ -132,34 +132,34 @@ public class Main {
                     while (ferma.whoIsLive()) {//Ищем живое домашенее животное
                         randPet = random.nextInt(ferma.getMaxAnimal());
                         if (ferma.getAllPets()[randPet].isLive()) {
-                            break;
+                            break;//если есть живой питомец, то рандомим пока он не найдется
                         }
                     }
-                    while (wildAnimal.whoIsHere()) {
+                    while (wildAnimal.whoIsHere()) {//Ищем ДЖ, которого еще не прогнали 4раза
                         randWildAnimal = random.nextInt(wildAnimal.getCount());
-                        if (wildAnimal.getWildAnimals()[randWildAnimal].getGoAway() < 4
-                                && wildAnimal.getWildAnimals()[randWildAnimal] != null) {
-                            break;
-                        }
+                        if (wildAnimal.getWildAnimals()[randWildAnimal].getGoAway() < 3
+                                && wildAnimal.getWildAnimals()[randWildAnimal] != null) break;//рандомим пока не найдем его
                     }
                     if (ferma.whoIsLive() && wildAnimal.whoIsHere()) {//Если есть дикое животное и хотяб один питомец
                         System.out.println("На питомцев напал(а)" + wildAnimal.getWildAnimals()[randWildAnimal].getName());
-                        if (random.nextBoolean()) {
+                        if (random.nextBoolean()) {//рандомно прогонит ли фермер дикое животное
                             wildAnimal.getWildAnimals()[randWildAnimal]
                                     .setGoAway(wildAnimal.getWildAnimals()[randWildAnimal].getGoAway() + 1);//Прогоняем животное
+                            System.out.println(wildAnimal.getWildAnimals()[randWildAnimal].getName()+" Прогнали "+wildAnimal.getWildAnimals()[randWildAnimal].getGoAway()+" раза ");
                             System.out.println("Но фермер прогнал его!");
                         } else if (wildAnimal.getWildAnimals()[randWildAnimal].getSpeed() < ferma.getAllPets()[randPet].getSpeed()) {
+                            //не пронал, но если Питомец быстрее, то он убегает
                             System.out.println("Фермер не прогнал животное, но питомец убежал");
-                        } else if (random.nextBoolean()) {//Ранил животное
-                            ferma.getAllPets()[randPet]
+                        } else if (random.nextBoolean()) {//Если питомец не убежал, то ДЖ рандомно или ранит или убивает питомца
+                            ferma.getAllPets()[randPet]//ранил
                                     .setHealth(ferma.getAllPets()[randPet].getHealth() - wildAnimal.getWildAnimals()[randWildAnimal].getStrong());
-                            if (ferma.getAllPets()[randPet].getHealth() < 0) {
+                            if (ferma.getAllPets()[randPet].getHealth() < 0) {//Ранил, и убил
                                 ferma.getAllPets()[randPet].setLive(false);
                                 System.out.println("Животное забили");
                             } else
-                                System.out.println("Животное " + ferma.getAllPets()[randPet].getName() + " было ранено животным:"
+                                System.out.println("Животное " + ferma.getAllPets()[randPet].getName() + " было ранено животным:"//Просто ранил, животное выжило
                                         + wildAnimal.getWildAnimals()[randWildAnimal].getName());
-                        } else {
+                        } else {//Животное съели
                             ferma.getAllPets()[randPet].setLive(false);
                             System.out.println("Животное съели!");
                         }

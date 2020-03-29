@@ -9,20 +9,12 @@ public class OtherAnimal {
     private Fox[] foxes = new Fox[1];
     private Bear[] bears = new Bear[1];
     private WildAnimal[] wildAnimals = new WildAnimal[3];
-    private int count = 0;
-    private int whoIshereWild = 0;
+    private int count = 0;//счетчик ДЖ
 
-    public void numWhoIsWho() {
+    public boolean whoIsHere() {//есть ли ДЖ, которые могут приходить на ферму
         for (int i = 0; i < getCount(); i++) {
-            if (getWildAnimals()[i].getGoAway() < 4) setWhoIshereWild(getWhoIshereWild()+1);
-        }
-    }
-
-    public boolean whoIsHere() {
-        for (int i = 0; i < getCount(); i++) {
-            if (getWildAnimals()[i] != null) {
-                return true;
-            }
+            if (getWildAnimals()[i] != null && getWildAnimals()[i].getGoAway() < 3)
+                return true;//есть ли ДЖ,которых прогнали меньше 4 раз
         }
         return false;
     }
@@ -45,10 +37,6 @@ public class OtherAnimal {
 
     public WildAnimal[] getWildAnimals() {
         return wildAnimals;
-    }
-
-    public void setWildAnimals(WildAnimal[] wildAnimals) {
-        this.wildAnimals = wildAnimals;
     }
 
     public int getCount() {
@@ -87,13 +75,5 @@ public class OtherAnimal {
                     getWildAnimals()[getCount()].getStrong() + " скорость - " + getWildAnimals()[getCount()].getSpeed());
             setCount(getCount() + 1);
         }
-    }
-
-    public int getWhoIshereWild() {
-        return whoIshereWild;
-    }
-
-    public void setWhoIshereWild(int whoIshereWild) {
-        this.whoIshereWild = whoIshereWild;
     }
 }

@@ -4,29 +4,31 @@ import ferm.man.FermerMan;
 import ferm.pet.*;
 
 public class Ferma implements Cloneable {
-    private Pet[] allPets = new Pet[10];
+    private Pet[] allPets = new Pet[10];//Массив со всеми домашними питомцами
     private Cat[] cats = new Cat[10];
     private Chiken[] chikens = new Chiken[10];
     private Cow[] cows = new Cow[10];
     private Rabit[] rabits = new Rabit[10];
     private FermerMan man = new FermerMan();
-    private int maxAnimal = 0;
-    private boolean isSomeoneIsLive = true;
-    private int whoLive = 0;
+    private int maxAnimal = 0;//счетчик домашних животных
+    private boolean isSomeoneIsLive = true;//Есть ли живые питомцы,которые могут давать ресурсы
 
-    public void takeRes() {
-        for (int i = 0; i < getMaxAnimal(); i++) {
-            if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof Givresurces) {
-                getMan().setRes(getMan().getRes() + getAllPets()[i].getResources());
-                getAllPets()[i].setResources(0);
+    public void takeRes() {//Фермер собирает ресурсы
+        for (int i = 0; i < getMaxAnimal(); i++) {//Перебираем всех питомцев
+            if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof Givresurces) //если питомец есть
+                // и он живой и он может давать ресурсы
+                {
+                getMan().setRes(getMan().getRes() + getAllPets()[i].getResources());//Фермер собирает ресурсы
+//                getAllPets()[i].setResources(0);
             }
         }
     }
 
-    public boolean whoIsLive() {
+    public boolean whoIsLive() {//Есть ли живые питомцы, которые могут довать ресурсы
         for (int i = 0; i < getMaxAnimal(); i++) {
-            if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof Givresurces) {
-                setWhoLive(getWhoLive()+1);
+            //если питомец есть и он живой и он может давать ресурсы
+            if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof Givresurces)
+            {
                 return true;
             }
         }
@@ -36,15 +38,18 @@ public class Ferma implements Cloneable {
     public void eatPet() {//Фермер ест животное
         setSomeoneIsLive(true);
         for (int i = 0; i < getMaxAnimal(); i++) {
-            if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof Givresurces && getAllPets()[i].getResources() != 0) {
+            //Если питомец есть и он живой и он может давать ресурсы
+            if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof Givresurces) {
                 setSomeoneIsLive(false);
             }
         }
-        if (isSomeoneIsLive()) {
+        if (isSomeoneIsLive()) {//если нет живых питомцев,которые могут давать рес
             for (int i = 0; i < getMaxAnimal(); i++) {
-                if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof CanBeEatenFermerMan) {
-                    getMan().setRes(getMan().getRes() + getAllPets()[i].getWeight());
-                    getAllPets()[i].setLive(false);
+                //если питомец есть и он живой и он может быть съеден фермером
+                if (getAllPets()[i] != null && getAllPets()[i].isLive() && getAllPets()[i] instanceof CanBeEatenFermerMan)
+                {
+                    getMan().setRes(getMan().getRes() + getAllPets()[i].getWeight());//фермер ест и получает ресурсы равные его весу
+                    getAllPets()[i].setLive(false);//питомец мертв
                     System.out.println("Был съеден фермером "+ getAllPets()[i].getName());
                     break;
                 }
@@ -52,11 +57,10 @@ public class Ferma implements Cloneable {
         }
     }
 
-    public void feedPets() {
+    public void feedPets() {//кормим питомцев
         for (int i = 0; i < getMaxAnimal(); i++) {
-            if (getAllPets()[i].isLive() && getAllPets()[i].getHealth() < 100) {
-                getAllPets()[i].getAddHealth(getMan());
-            }
+            //если питомец жив и его хп меньше максимума
+            if (getAllPets()[i].isLive() && getAllPets()[i].getHealth() < 100) getAllPets()[i].getAddHealth(getMan());//добавляем хп животному
         }
     }
 
@@ -76,16 +80,15 @@ public class Ferma implements Cloneable {
         this.maxAnimal = maxAnimal;
     }
 
-    public void setRabits(Rabit[] rabits) {
-        if (getAllPets()[getMaxAnimal()] == null && getMaxAnimal() < 10) {
-            this.rabits = rabits;
-//            getAllPets()[getMaxAnimal()]
-            System.arraycopy(getRabits(), 0, getAllPets(), getMaxAnimal(), 1);
+    public void setRabits(Rabit[] rabits) {//добавляем кролика
+        if (getAllPets()[getMaxAnimal()] == null && getMaxAnimal() < 10) {//если место есть и животных меньше 10
+            this.rabits = rabits;//создаем кролика
+            System.arraycopy(getRabits(), 0, getAllPets(), getMaxAnimal(), 1);//копируем кролика в массив с питомцами
 //                                                                      int weight,         int speed, int health, int resources
             System.out.println("Добавлен кролик: имя - " + getAllPets()[getMaxAnimal()].getName() + " вес - " +
                     getAllPets()[getMaxAnimal()].getWeight() + " скорость = " +
                     getAllPets()[getMaxAnimal()].getSpeed() + " ресурсы - " + getAllPets()[getMaxAnimal()].getResources());
-            setMaxAnimal(getMaxAnimal() + 1);
+            setMaxAnimal(getMaxAnimal() + 1);//счетчик кол-ва питомцев
         }
     }
 
@@ -148,13 +151,5 @@ public class Ferma implements Cloneable {
 
     public Pet[] getAllPets() {
         return allPets;
-    }
-
-    public int getWhoLive() {
-        return whoLive;
-    }
-
-    public void setWhoLive(int whoLive) {
-        this.whoLive = whoLive;
     }
 }
